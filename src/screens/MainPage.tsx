@@ -16,6 +16,7 @@ import {Toast} from 'react-bootstrap'
 
 import Tabs from 'react-bootstrap/Tabs';
 import Tab  from 'react-bootstrap/Tab';
+//import {Tab, Tabs} from 'react-bootstrap'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from "react-router-dom";
@@ -25,8 +26,6 @@ import '../css/tabs.css';
 
 const MainPage = () => {
     const navigate = useNavigate();
-    const [displayName, setDisplayName] = useState('');
-    const [photoURL, setPhotoURL] = useState('');
     const [showInfo, setShowInfo] = useState(false);
     const [showToast, setShowToast] = useState(false);
     const [show, setShow] = useState(false)
@@ -85,7 +84,7 @@ const MainPage = () => {
 
 
     return (
-      <div style={{height : '100%'}}>
+      <div style={{height : '100%', position: 'fixed', overflow: 'hidden', backgroundColor: '#F2A900'}}>
           <div style={{height: '100%', position: 'relative'}}>
             <Snackbar
               open={showSnackbar}
@@ -100,26 +99,14 @@ const MainPage = () => {
             </Toast>
             <InfoModal setShowInfo={setShowInfo} showInfo={showInfo} />
             <MenuAppBar logOut={logOut} setShowInfo={setShowInfo} />
-            {/*<TabsUnstyled defaultValue={0} style={{height: '100%'}}>
-              <TabsList>
-                <Tab>Match Survey</Tab>
-                <Tab>Your Match</Tab>
-              </TabsList>
-              <TabPanel value={0} style={{height: '100%'}}>
+            <Tabs activeKey={match != "" ? "1" : activeTab} onSelect={(val)=>setActiveTab(val)} className="myClass">
+                <Tab style={{backgroundColor: '#FF008A'}} eventKey="0" title="Match Survey" disabled={match != ""}>
                 <Survey setSurveyed={setSurveyed} user={user} onboarded={onboarded} showSnackbarMessage={showSnackbarMessage} />
-              </TabPanel>
-              <TabPanel value={1}>
+                </Tab>
+                <Tab style={{backgroundColor: '#FF008A'}} eventKey="1" title="Your Match">
                 <Match user={user} surveyed={surveyed} match={match} surveyDone={surveyDone} />
-              </TabPanel>
-    </TabsUnstyled>*/}
-                <Tabs className="myClass" activeKey={match != "" ? "1" : activeTab} onSelect={(val)=>setActiveTab(val)}>
-                    <Tab eventKey="0" title="Match Survey" disabled={match != ""}>
-                    <Survey setSurveyed={setSurveyed} user={user} onboarded={onboarded} showSnackbarMessage={showSnackbarMessage} />
-                    </Tab>
-                    <Tab eventKey="1" title="Your Match">
-                    <Match user={user} surveyed={surveyed} match={match} surveyDone={surveyDone} />
-                    </Tab>
-                </Tabs>
+                </Tab>
+            </Tabs>
           </div>
       </div>   
     );

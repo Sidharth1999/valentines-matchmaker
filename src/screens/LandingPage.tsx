@@ -1,28 +1,40 @@
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import {Image} from 'react-bootstrap'
 import { auth } from '../utils/firebase.js';
+import backgroundImg from '../assets/ucla_background.jpeg';
 
 const LandingPage = () => {
     const uiConfig = {
         signInFlow: 'popup',
         signInSuccessUrl: '/main',
         signInOptions: [
-          auth.GoogleAuthProvider.GOOGLE_SIGN_IN_METHOD
+            {
+                provider: auth.GoogleAuthProvider.PROVIDER_ID,
+                scopes: [
+                  // Your requested scopes.
+                  'https://www.googleapis.com/auth/plus.login'
+                ],
+                customParameters: {
+                  // Forces account selection even when one account
+                  // is available.
+                  hd: 'ucla.edu'
+                }
+              }
         ],
     };
     return (
-        <div style={{backgroundImage: `url('https://images.unsplash.com/photo-1626060490950-fabf0d72ca8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dWNsYXxlbnwwfHwwfHw%3D&w=1000&q=80')`, backgroundPosition: 'center',
+        <div style={{backgroundImage:  `url(${backgroundImg})`, backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         width: '100vw',
         height: '100vh'}}>
-            <p style={{fontFamily: 'Snell Roundhand, cursive', textAlign: 'center', fontWeight: 'bold', fontSize: 50, color: 'white', paddingTop : 100}}>Valentine's</p>
+            <p style={{fontFamily: 'Snell Roundhand, cursive', textAlign: 'center', fontWeight: 'bold', fontSize: 50, color: 'white', paddingTop : 70}}>Valentine's</p>
             <div style={{display: 'flex', justifyContent: 'center'}}>
-            <Image src="https://www.pngplay.com/wp-content/uploads/12/Hearts-Transparent-PNG.png" style={{height: 150, width: 150}}/>
+            <Image src={require('../assets/free_heart.png')} style={{height: 200, width: 200}}/>
             </div>
             <p style={{fontFamily: 'Snell Roundhand, cursive', textAlign: 'center', fontWeight: 'bold', fontSize: 50, color: 'white'}}>Matchmaker</p>
             <div style={{display: 'flex', justifyContent: 'center'}}>
-            <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/UCLA_Bruins_logo.svg/1200px-UCLA_Bruins_logo.svg.png" style={{height: 150, width: 150}}/>
+            <Image src={require('../assets/ucla_bruins_logo.png')} style={{height: 125, width: 125}}/>
             </div>
             <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={auth.getAuth()} />
         </div>

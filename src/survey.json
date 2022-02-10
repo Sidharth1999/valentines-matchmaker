@@ -1,24 +1,167 @@
 {
     "survey": [
         {
-            "question": "Hi, this is question 1",
-            "options" : ["Option 1", "Option 2", "Option 3", "Option 4"]
+            "question": "How would you characterize yourself? 🤔",
+            "options" : ["Introvert", "Extrovert", "Ambivert"]
         },
         {
-            "question": "Hi, this is question 1",
-            "options" : ["Option 1", "Option 2", "Option 3", "Option 4"]
+            "question": "What is your ideal kind of date? 😃",
+            "options" : ["Fancy restaurant + good food", "Something ~ adventurous ~", "Something simple but fun!"] 
         },
         {
-            "question": "Hi, this is question 1",
-            "options" : ["Option 1", "Option 2", "Option 3", "Option 4"]
+            "question": "How important is appearance to you? 😍",
+            "options" : ["Important", "Initially a little", "Does not matter"]
         },
         {
-            "question": "Hi, this is question 1",
-            "options" : ["Option 1", "Option 2", "Option 3", "Option 4"]
+            "question": "How important is sex to you in a relationship? 🍑 🍆",
+            "options" : ["SEX ALL THE TIME", "Like a normal amount", "Not nearly important as other things"]
         },
         {
-            "question": "Hi, this is question 1",
-            "options" : ["Option 1", "Option 2", "Option 3", "Option 4"]
+            "question": "How would you identify yourself? 🔎",
+            "options": ["Religious", "Spiritual", "Atheist", "None of these"]
+        },
+        {
+            "question": "What are your feelings about politics? 🇺🇸",
+            "options": ["Very passionate about politics", "Generally interested in politics", "Do not care"]
+        },
+        {
+            "question": "Are you nerdy or geeky? 🤓",
+            "options" : ["Love nerding out with people", "I have a nerdy or geeky side", "Not really"]
+        },
+        {
+            "question": "How quirky or weird are you? 🤡",
+            "options" : ["If you caught me on tape ... oof", "Indulge in some weird behaviors occasionally", "Very serious no BS"]
+        },
+        {
+            "question": "Do you like attending sporting events? ⚽️ 🏀 🏈",
+            "options" : ["GO BRUINS!", "Once in a while", "Could not care less", "Someone should ban sports"],
+            "number": 9
+        },
+        {
+            "question": "Do you like partying? 🎉 🎵",
+            "options" : ["I am that person dancing on your table", "Once in a while with the right crowd", "Not really my scene TBH"]
+        },
+        {
+            "question": "How important is social media to you? 📱",
+            "options" : ["I care a lot about my online persona", "I keep my close friends posted", "Pretty much off the grid"]
+        },
+        {
+            "question": "Early Bird or Night Owl?",
+            "options": ["Early Bird 🐤", "Night Owl 🦉", "Neither"]
+        },
+        {
+            "question": "How often do you drink? 🍺",
+            "options" : ["It's easier to ask how often do I not drink lol", "Occasionally", "Almost never"]
+        },
+        {
+            "question": "How are you about recreational drugs? 💊",
+            "options" : ["Daily active user", "Once in a while", "Never"]
+        },
+        {
+            "question": "What type of genre of television/films do you prefer 📺",
+            "options" : ["Sitcoms I need the laughters", "Drama", "Action", "Documentaries I am a nerd"]
+        },
+        {
+            "question": "What is (approximately) your favorite genre of music? 🎵",
+            "options": ["Pop/K-Pop", "Rap", "Rock", "EDM"]
+        },
+        {
+            "question": "What are your feelings about food? 🍔 🍟 🍕",
+            "options": ["Food FANATIC", "Yeah I like trying new foods every now and then", "I eat to survive."]
+        },
+        {
+            "question": "Do you like to read? 📕",
+            "options": ["I really enjoy reading", "I read the odd book", "Does Reddit count?"],
+            "number": 18
+        },
+        {
+            "question": "What kind of animal person are you?",
+            "options": ["Dog person 🐶", "Cat person 🐱", "Both 🐶🐱", "Neither"]
+        },
+        {
+            "question": "How do you feel about traveling? ✈️",
+            "options": ["I am never where I say I am because I traveled", "I enjoy a vacation every now and then", "I am neutral about it"]
+        },
+        {
+            "question": "Do you enjoy having an active lifestyle? 🤺⛷🏄‍♂️",
+            "options": ["I am a very active person", "I work out/play sports once in a while", "I am a couch potato and not ashamed"]
+        },
+        {
+            "question": "Pessimistic or optimistic? ➕ ➖",
+            "options": ["Tend to be optimistic", "Pragmatic", "Tend to be pessimistic"]
+        },
+        {
+            "question": "Favorite UCLA dining hall?",
+            "options": ["De Neve", "Epicuria", "BPlate", "Feast"]
+        },
+        {
+            "question": "Favorite take-out place?",
+            "options": ["BCafe", "The Study", "Rendez", "The Drey"]
+        },
+        {
+            "question": "How have you found online classes? 💻",
+            "options": ["Enjoyable and convenient", "Neutral about it 😐", "Unmotivating and boring"]
+        },
+        {
+            "question": "Someone had the motherfucking BALLS to talk shit about you behind your back. You:",
+            "options": ["Confront them 🖕", "Be passive aggressive 🙄", "Ignore it 😗"],
+            "num": 26
+        },
+        {
+            "question": "Do you have a tendency to let things build up or do you retroactively address things? 🙂",
+            "options": ["Build build build it up baby!", "Retroactive"]
+        },
+        {
+            "question": "Least favorite billionaire 💸 💵 💴 💶 💷",
+            "options": ["Zuckerburg", "Bezos", "Musk"]
+        },
+        {
+            "question": "Which of the following would you choose? 🧿",
+            "options": ["Take a peek at the future", "Undo one action in the past", "Extend your life by 5 years"]
+        },
+        {
+            "question": "Fame or fortune? 😎 💵",
+            "options": ["Fame", "Fortune", "Neither matter to me"]
+        },
+        {
+            "question": "Are you spontaneous or do you like having a plan",
+            "options": ["Spontaneous", "Some of both", "Plan ahead"]
+        },
+        {
+            "question": "Cruising on a bird and you can either stay straight and injure 4 people, or steer and injure 3. What do you do?",
+            "options": ["Stay straight ⬆️", "Steer ↖️"]
+        },
+        {
+            "question": "Same as before, except one of them goes to USC, with a 70% chance in the group of 4 and 30% chance in the group of 3",
+            "options": ["Stay straight ⬆️", "Steer ↖️", "Try getting them all to be safe 👍 💯"]
+        },
+        {
+            "question": "Meal Plan Attitude",
+            "options": ["19P so I always have enough 👊", "19R or 14P because its good enough 👍", "< 14 and make friends with 19P people 😎"]
+        },
+        {
+            "question": "If you had to do one of the following, what would you choose?",
+            "options": ["Prank call Daddy Block for at least 3 min 📞", "Swim in inverted fountain 🏊‍♀️", "Make cashier repeat themselves 5 times 🤦‍♂️", "Leave satanic propaganda outside your dorm for a day 👹 👺"]
+        },
+        {
+            "question": "Andre",
+            "options": ["Love his hustle!", "Will transcend dimensions to avoid him", "Who?"]
+        },
+        {
+            "question": "Do you do the midnight yell? 🗣",
+            "options": ["I invented that shit", "Very often", "Once or twice", "Never"]
+        },
+        {
+            "question": "You discover one day that your S.O has been hoarding lost Bruincards. How do you react?",
+            "options": ["Freak the FUCK out", "Confront and try to understand this behavior", "Be in denial about it", "Combine it with YOUR collection of lost Bruincards"]
+        },
+        {
+            "question": "Someone took your WET clothes out of the washer and dumped it on the floor so they could do their laundry. How do you react?",
+            "options": ["Shrug it off and deal with it 🤷‍♀️", "Intercept their clothes and yeet them into the bushes 🏌🏽‍♂️", "Stuff them in washer heavy duty 💦💦💦", "Stuff them in dryer high heat mode 🔥🔥🔥"]
+        },
+        {
+            "question": "Did you enjoy the survey? Yes, this will be considered in the matching",
+            "options": ["Yes!", "It was aight", "Fuck this shit lol"]
         }
     ]
 }

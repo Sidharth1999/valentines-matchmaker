@@ -13,6 +13,8 @@ import { uploadBytes, getDownloadURL, ref } from "firebase/storage";
 import { storage, auth, database } from '../utils/firebase.js'
 import { doc, setDoc } from "firebase/firestore"; 
 import '../css/file_input.css'
+import '../css/onboard.css'
+//import '../css/text.css'
 import { CameraAlt } from '@mui/icons-material'
 
 const ModalComponent = (props) => {
@@ -27,7 +29,7 @@ const ModalComponent = (props) => {
 
     useEffect(()=>{
       if(user){ 
-        setDisplayName(user.displayName.split(' ')
+        setDisplayName(user.displayName.toLowerCase().split(' ')
       .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
       .join(' ').split(' ')[0])
         setSelectedImage(user.photoURL)
@@ -63,7 +65,7 @@ const ModalComponent = (props) => {
           preference,
           contact,
           message,
-          survey: Array(5).fill(-1),
+          survey: Array(35).fill(-1),
           match: ""
         });
         setOnboarded(true)
@@ -72,9 +74,9 @@ const ModalComponent = (props) => {
     }
 
     return (
-     <Modal show={show}>
+     <Modal show={show} className="my-modal-2">
         <Modal.Header>
-          <Modal.Title>Welcome, {displayName}! Let's get you started!</Modal.Title>
+          <Modal.Title style={{color: 'white', fontFamily: 'Snell Roundhand, cursive', fontWeight: 'bold'}}>Welcome, {displayName}! Let's get you started!</Modal.Title>
         </Modal.Header>
         <div style={{marginLeft: '5%', marginTop : '5%', marginBottom : '5%'}}>
           <div style={{display: 'flex', justifyContent: 'center'}}>
@@ -91,7 +93,7 @@ const ModalComponent = (props) => {
             </div>
           </div>
           <FormControl>
-            <FormLabel id="demo-radio-buttons-group-label">You are a:</FormLabel>
+            <FormLabel id="demo-radio-buttons-group-label" style={{color: 'white'}}>You are a:</FormLabel>
             <RadioGroup
                 onChange={(e)=>setGender(e.target.value)}
                 value={gender}
@@ -100,15 +102,15 @@ const ModalComponent = (props) => {
                 defaultValue="female"
                 name="radio-buttons-group"
             >
-                <FormControlLabel value="female" control={<Radio />} label="Man" />
-                <FormControlLabel value="male" control={<Radio />} label="Woman" />
-                <FormControlLabel value="n/a" control={<Radio />} label="Prefer not to say" />
+                <FormControlLabel style={{color: 'white'}} value="female" control={<Radio />} label="Man" />
+                <FormControlLabel style={{color: 'white'}} value="male" control={<Radio />} label="Woman" />
+                <FormControlLabel style={{color: 'white'}} value="n/a" control={<Radio />} label="Prefer not to say" />
             </RadioGroup>
           </FormControl>
           <div style={{height: 10}} />
 
           <FormControl>
-            <FormLabel id="demo-radio-buttons-group-label">You'd like to be matched with a:</FormLabel>
+            <FormLabel style={{color: 'white'}} id="demo-radio-buttons-group-label">You'd like to be matched with a:</FormLabel>
             <RadioGroup
                 onChange={(e)=>setPreference(e.target.value)}
                 value={preference}
@@ -117,17 +119,18 @@ const ModalComponent = (props) => {
                 defaultValue="female"
                 name="radio-buttons-group"
             >
-                <FormControlLabel value="female" control={<Radio />} label="Man" />
-                <FormControlLabel value="male" control={<Radio />} label="Woman" />
-                <FormControlLabel value="either" control={<Radio />} label="Either" />
+                <FormControlLabel style={{color: 'white'}} value="female" control={<Radio />} label="Man" />
+                <FormControlLabel style={{color: 'white'}} value="male" control={<Radio />} label="Woman" />
+                <FormControlLabel style={{color: 'white'}} value="either" control={<Radio />} label="Either" />
             </RadioGroup>
           </FormControl>
           <div style={{height: 10}} />
 
 
-          <FormLabel id="demo-radio-buttons-group-label">A way to contact you (social, number)</FormLabel>
+          <FormLabel style={{color: 'white'}} id="demo-radio-buttons-group-label">A way to contact you (social, number)</FormLabel>
           <br />
           <TextField
+                  style={{backgroundColor: 'white'}} 
           value={contact}
           onChange={(e)=>setContact(e.target.value)}
           maxRows={1}
@@ -144,9 +147,10 @@ const ModalComponent = (props) => {
         <div style={{height: 10}} />
 
         
-        <FormLabel id="demo-radio-buttons-group-label">A message to your future match:</FormLabel>
+        <FormLabel style={{color: 'white'}}  id="demo-radio-buttons-group-label">A message to your future match:</FormLabel>
         <br />
         <TextField
+        style={{backgroundColor: 'white'}} 
           value={message}
           onChange={(e)=>setMessage(e.target.value)}
           multiline
@@ -166,7 +170,7 @@ const ModalComponent = (props) => {
 
       
       <div style={{display: 'flex', justifyContent: 'center'}}>
-          <Button disabled={disabled} variant="contained" onClick={submitData} >Submit</Button>
+          <Button style={{backgroundColor: '#0d6efd'}} disabled={disabled} variant="contained" onClick={submitData} >Submit</Button>
       </div>
       <div style={{height: 10}} />
 

@@ -10,7 +10,7 @@ import { auth } from '../utils/firebase'
 export default function MenuAppBar(props) {
   return (
     <Box sx={{ flexGrow: 1, marginBottom : '3%' }}>
-      <AppBar position="static">
+      <AppBar position="static" style={{backgroundColor: '#2D68C4'}}>
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             My Dashboard

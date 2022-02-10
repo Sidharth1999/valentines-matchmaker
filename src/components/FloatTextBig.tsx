@@ -9,13 +9,13 @@ const Item = styled(Paper)(({ theme }) => ({
   textAlign: 'center',
   color: theme.palette.text.secondary,
   //height: 60,
-  lineHeight: '40px',
+  lineHeight: '60px',
 }));
 
 const darkTheme = createTheme({ palette: { mode: 'dark' } });
 const lightTheme = createTheme({ palette: { mode: 'light' } });
 
-export default function FloatText(props) {
+export default function FloatTextBig(props) {
   return (
       <div style={{padding: '3%'}}>
           <ThemeProvider theme={lightTheme}>

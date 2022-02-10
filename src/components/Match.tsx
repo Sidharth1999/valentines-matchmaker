@@ -32,26 +32,26 @@ const Match = (props) => {
 
     return (
         <div style={{width: window.innerWidth, display: 'flex', justifyContent: 'center', flexDirection: 'column'}}>
-            <Image width={200} height={200} style={{alignSelf: 'center'}} src={photoURL ? photoURL : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWlXu1PRj2exCGLzY08c-ng7cebVgeQZ4USJdcZPGKnmpPtqFiv5RYphLbm4fJYdul32w&usqp=CAU'} />
+            <Image width={200} height={200} style={{alignSelf: 'center', marginTop : 50}} src={photoURL ? photoURL : require('../assets/heart_q.jpeg')} />
             {
                 matched ?
                 <>
-                    <p style={{alignSelf: 'center'}}>
-                        Your match is {name}
+                    <p style={{textAlign: 'center', fontFamily: 'Snell Roundhand, cursive', color: 'white', fontWeight: 'bold', fontSize: 30, padding: 20}}>
+                        Your match is {name}!
                     </p>
-                    <p style={{alignSelf: 'center'}}>
+                    <p style={{textAlign: 'center', fontFamily: 'Snell Roundhand, cursive', color: 'white', fontWeight: 'bold', fontSize: 30, padding: 20}}>
+                        Contact: {social}
+                    </p>
+                    <p style={{textAlign: 'center', fontFamily: 'Snell Roundhand, cursive', color: 'white', fontWeight: 'bold', fontSize: 20, padding: 20}}>
                         "{message}"
-                    </p>
-                    <p style={{alignSelf: 'center'}}>
-                        Social: {social}
-                    </p>
+                    </p>                
                 </> :
                 <>
-                    <p style={{alignSelf: 'center'}}>
+                    <p style={{textAlign: 'center', fontFamily: 'Snell Roundhand, cursive', color: 'black', fontWeight: 'bold', fontSize: 30, padding: 20}}>
                         {surveyDone || surveyed ? 'You are all set to be matched!' : 'Complete the survey <-'}
                     </p>
-                    <p style={{alignSelf: 'center'}}>
-                        Results will be released on the 13th of February at noon
+                    <p style={{textAlign: 'center', fontFamily: 'Snell Roundhand, cursive', color: 'black', fontWeight: 'bold', fontSize: 30, padding: 20}}>
+                        Results will be released on the <span style={{color: 'white'}}>13th of February at noon</span>
                     </p>
                 </>
             }  
