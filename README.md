@@ -9,8 +9,6 @@
 <a href="https://github.com/Sidharth1999/valentines-matchmaker/blob/main/src/assets/match.jpg?raw=true"><img src="https://github.com/Sidharth1999/valentines-matchmaker/blob/main/src/assets/match.jpg?raw=true" alt="match.jpg" border="0" width="240" height="450"></a>
 </div>
 
-https://github.com/Sidharth1999/valentines-matchmaker/blob/main/src/assets/landing.jpeg?raw=true
-
 # Motivation
 
 Around a week before Valentine's Day, I noticed that there weren't any other matchmaking initiatives being planned. So, I spontaneously decided to take up the challenge because I knew I had all the necessary skills to do so myself.
@@ -27,13 +25,13 @@ There are certainly state-of-the-art matchmaking algorithms out there, but given
 4. Taking the highest similarity score from a similarity matrix, matching the pair corresponding to that entry, and eliminating them from the pool
 5. Continue step 4 until the pool is empty
 
-# Ethical considerations
-
-The app only collects basic data such as people's names, emails, and profile photos, but as soon as the matchmaking was complete, I deleted all of this data. I also did not look at this data while the app was live. Moreover, while running the algorithm, I made sure to anonymize the data with user IDs
-
 # Result
 
 With a few days left before Valentine's day, my marketing efforts allowed me to ultimately match around 50 people.
+
+# Ethical considerations
+
+The app only collects basic data such as people's names, emails, and profile photos, but as soon as the matchmaking was complete, I deleted all of this data. I also did not look at this data while the app was live. Moreover, while running the algorithm, I made sure to anonymize the data with user IDs
 
 # Future considerations
 
