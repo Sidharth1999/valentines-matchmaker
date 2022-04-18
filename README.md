@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Glimpses of the app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Motivation
 
-## Available Scripts
+Around a week before Valentine's Day, I noticed that there weren't any other matchmaking initiatives being planned. So, I spontaneously decided to take up the challenge because I knew I had all the necessary skills to do so myself.
 
-In the project directory, you can run:
+In a few days, I was able to complete the entire project - from mental designs to a fully styled, polished looking app. To save myself the engineering effort, I also designed the app to operate without an explicitly programmed backend and just firebase APIs.
 
-### `npm start`
+# Matchmaking Algorithm
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+There are certainly state-of-the-art matchmaking algorithms out there, but given my time constraints I went ahead with a simplified algorithm:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Vectorizing survey results
+2. Normalizing the scores
+3. Applying a form of Euclidean distance to calculate pair-wise similarities
+4. Taking the highest similarity score from a similarity matrix, matching the pair corresponding to that entry, and eliminating them from the pool
+5. Continue step 4 until the pool is empty
 
-### `npm test`
+# Ethical considerations
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The app only collects basic data such as people's names, emails, and profile photos, but as soon as the matchmaking was complete, I deleted all of this data. I also did not look at this data while the app was live. Moreover, while running the algorithm, I made sure to anonymize the data with user IDs
 
-### `npm run build`
+# Result
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+With a few days left before Valentine's day, my marketing efforts allowed me to ultimately match around 50 people.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Future considerations
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+I plan to keep this an ongoing project where I may improve the following aspects:
 
-### `npm run eject`
+1. The sophistication of the matchmaking algorithm
+2. The UI/UX of the app
+3. It bothered me a little that my users would need to take my word that I was properly handling their data. I realized that there was no good reason for this system to be centralized. As I get time, I might decentralize the app on the Blockchain using smart contracts and democratized voting processes for what questions to include in the survey, how data is handled/stored, and when to release results.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

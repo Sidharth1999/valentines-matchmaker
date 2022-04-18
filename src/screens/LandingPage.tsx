@@ -1,11 +1,11 @@
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import {Image} from 'react-bootstrap'
 import { auth } from '../utils/firebase.js';
-import backgroundImg from '../assets/ucla_background.jpeg';
+import backgroundImg from '../assets/backdrop.jpg';
 
 const LandingPage = () => {
     const uiConfig = {
-        signInFlow: 'popup',
+        signInFlow: 'redirect',
         signInSuccessUrl: '/main',
         signInOptions: [
             {
@@ -17,7 +17,7 @@ const LandingPage = () => {
                 customParameters: {
                   // Forces account selection even when one account
                   // is available.
-                  hd: 'ucla.edu'
+                  //hd: 'ucla.edu'
                 }
               }
         ],
@@ -32,10 +32,10 @@ const LandingPage = () => {
             <div style={{display: 'flex', justifyContent: 'center'}}>
             <Image src={require('../assets/free_heart.png')} style={{height: 200, width: 200}}/>
             </div>
-            <p style={{fontFamily: 'Snell Roundhand, cursive', textAlign: 'center', fontWeight: 'bold', fontSize: 50, color: 'white'}}>Matchmaker</p>
-            <div style={{display: 'flex', justifyContent: 'center'}}>
+            <p style={{fontFamily: 'Snell Roundhand, cursive', textAlign: 'center', fontWeight: 'bold', fontSize: 50, color: 'white'}}>Match-maker</p>
+            {/*<div style={{display: 'flex', justifyContent: 'center'}}>
             <Image src={require('../assets/ucla_bruins_logo.png')} style={{height: 125, width: 125}}/>
-            </div>
+    </div>*/}
             <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={auth.getAuth()} />
         </div>
     )

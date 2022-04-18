@@ -96,7 +96,7 @@ const Survey = (props) => {
 
     const Welcome = () => (
         <Card style={{position: 'relative', height: window.innerHeight * 0.7, backgroundColor: '#2D68C4', width: window.innerWidth}}>
-            <FloatTextBig text={`Welcome to the Bruin Valentine's Matchmaker! Are you ready to start your match survey?`} fontSize={30} /> 
+            <FloatTextBig text={`The Valentine's Matchmaker Survey has closed :( Feel free to do the survey for fun though!`} fontSize={30} /> 
             <Button style={{backgroundColor: '#FF008A', width: '60', alignSelf: 'center', fontWeight: 'bold'}} onClick={()=>setIndex(1)}>
                 <div style={{display: 'flex', flexDirection: 'row'}}>
                 <span>Get Started</span>
@@ -107,12 +107,12 @@ const Survey = (props) => {
     )
     const End = () => (
         <Card style={{position: 'relative', height: window.innerHeight * 0.7, backgroundColor: '#2D68C4', width: window.innerWidth}}>
-            <FloatTextBig text={complete ? 'Thanks for finishing! You can go back and edit or otherwise save your answers' : 'You have reached the end of the survey ... but you did not finish!'} fontSize={30} /> 
-            {complete? <Button style={{backgroundColor: '#FF008A', width: '60', alignSelf: 'center'}} onClick={submitSurvey}>
+            <FloatTextBig text={complete ? 'Thanks for finishing!' : 'You have reached the end of the survey ... but you did not finish!'} fontSize={30} /> 
+            {/*complete? <Button style={{backgroundColor: '#FF008A', width: '60', alignSelf: 'center'}} onClick={submitSurvey}>
                 <div style={{display: 'flex', flexDirection: 'row'}}>
                 <span style={{fontWeight: 'bold'}}>Save Answers</span>
                 </div>
-            </Button> : null}
+    </Button> : null*/}
         </Card>
     )
     const carouselPages = [<Welcome />, ...surveyPages, <End />]

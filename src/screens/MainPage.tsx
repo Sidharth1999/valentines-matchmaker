@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 import { auth } from '../utils/firebase.js';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
@@ -62,6 +62,21 @@ const MainPage = () => {
       }
     })
 
+    useEffect(async ()=>{
+      const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ title: 'React POST Request Example' })
+      };
+      /*fetch('https://reqres.in/api/posts', requestOptions)
+          .then(response => response.json())
+          .then(data => console.log(data));*/
+      let data = await fetch('https://reqres.in/api/posts', requestOptions);
+      console.log(data, "DATA");
+      data = await data.json()
+      console.log(data, "DATA2")
+    }, [])
+
     const logOut = () => {
       auth.getAuth().signOut()
       navigate('/')
@@ -99,8 +114,8 @@ const MainPage = () => {
             </Toast>
             <InfoModal setShowInfo={setShowInfo} showInfo={showInfo} />
             <MenuAppBar logOut={logOut} setShowInfo={setShowInfo} />
-            <Tabs activeKey={match != "" ? "1" : activeTab} onSelect={(val)=>setActiveTab(val)} className="myClass">
-                <Tab style={{backgroundColor: '#FF008A'}} eventKey="0" title="Match Survey" disabled={match != ""}>
+            <Tabs activeKey={activeTab} onSelect={(val)=>setActiveTab(val)} className="myClass">
+                <Tab style={{backgroundColor: '#FF008A'}} eventKey="0" title="Match Survey">
                 <Survey setSurveyed={setSurveyed} user={user} onboarded={onboarded} showSnackbarMessage={showSnackbarMessage} />
                 </Tab>
                 <Tab style={{backgroundColor: '#FF008A'}} eventKey="1" title="Your Match">

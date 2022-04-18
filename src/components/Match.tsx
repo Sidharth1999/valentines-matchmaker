@@ -16,7 +16,10 @@ const Match = (props) => {
     }, [match])
 
     const fetchMatch = async () => {
-        if(match === "") return;
+        const now = new Date()
+        const release = new Date('Sun, 13 Feb 2022 12:00:00')
+        if(now  < release) return;
+        if(match == "") return;
         const docRef = doc(db, "users", match);
         const docSnap = await getDoc(docRef);
         const data = docSnap.data()
@@ -36,13 +39,13 @@ const Match = (props) => {
             {
                 matched ?
                 <>
-                    <p style={{textAlign: 'center', fontFamily: 'Snell Roundhand, cursive', color: 'white', fontWeight: 'bold', fontSize: 30, padding: 20}}>
+                    <p style={{textAlign: 'center', fontFamily: 'Snell Roundhand, cursive', color: 'white', fontWeight: 'bold', fontSize: 30, padding: 5}}>
                         Your match is {name}!
                     </p>
-                    <p style={{textAlign: 'center', fontFamily: 'Snell Roundhand, cursive', color: 'white', fontWeight: 'bold', fontSize: 30, padding: 20}}>
+                    <p style={{textAlign: 'center', fontFamily: 'Snell Roundhand, cursive', color: 'white', fontWeight: 'bold', fontSize: 30, padding: 5}}>
                         Contact: {social}
                     </p>
-                    <p style={{textAlign: 'center', fontFamily: 'Snell Roundhand, cursive', color: 'white', fontWeight: 'bold', fontSize: 20, padding: 20}}>
+                    <p style={{textAlign: 'center', fontFamily: 'Snell Roundhand, cursive', color: 'white', fontWeight: 'bold', fontSize: 20, padding: 5}}>
                         "{message}"
                     </p>                
                 </> :

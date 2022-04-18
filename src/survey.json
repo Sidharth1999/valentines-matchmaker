@@ -18,7 +18,8 @@
         },
         {
             "question": "How would you identify yourself? 🔎",
-            "options": ["Religious", "Spiritual", "Atheist", "None of these"]
+            "options": ["Religious", "Spiritual", "Atheist", "None of these"],
+            "number": 5
         },
         {
             "question": "What are your feelings about politics? 🇺🇸",
@@ -47,7 +48,8 @@
         },
         {
             "question": "Early Bird or Night Owl?",
-            "options": ["Early Bird 🐤", "Night Owl 🦉", "Neither"]
+            "options": ["Early Bird 🐤", "Night Owl 🦉", "Neither"],
+            "number" : 12
         },
         {
             "question": "How often do you drink? 🍺",
@@ -59,11 +61,13 @@
         },
         {
             "question": "What type of genre of television/films do you prefer 📺",
-            "options" : ["Sitcoms I need the laughters", "Drama", "Action", "Documentaries I am a nerd"]
+            "options" : ["Sitcoms I need the laughters", "Drama", "Action", "Documentaries I am a nerd"],
+            "number": 15
         },
         {
             "question": "What is (approximately) your favorite genre of music? 🎵",
-            "options": ["Pop/K-Pop", "Rap", "Rock", "EDM"]
+            "options": ["Pop/K-Pop", "Rap", "Rock", "EDM"],
+            "number": 16
         },
         {
             "question": "What are your feelings about food? 🍔 🍟 🍕",
@@ -71,12 +75,12 @@
         },
         {
             "question": "Do you like to read? 📕",
-            "options": ["I really enjoy reading", "I read the odd book", "Does Reddit count?"],
-            "number": 18
+            "options": ["I really enjoy reading", "I read the odd book", "Does Reddit count?"]
         },
         {
             "question": "What kind of animal person are you?",
-            "options": ["Dog person 🐶", "Cat person 🐱", "Both 🐶🐱", "Neither"]
+            "options": ["Dog person 🐶", "Cat person 🐱", "Both 🐶🐱", "Neither"],
+            "number": 19
         },
         {
             "question": "How do you feel about traveling? ✈️",
@@ -92,11 +96,13 @@
         },
         {
             "question": "Favorite UCLA dining hall?",
-            "options": ["De Neve", "Epicuria", "BPlate", "Feast"]
+            "options": ["De Neve", "Epicuria", "BPlate", "Feast"],
+            "number": 23
         },
         {
             "question": "Favorite take-out place?",
-            "options": ["BCafe", "The Study", "Rendez", "The Drey"]
+            "options": ["BCafe", "The Study", "Rendez", "The Drey"],
+            "number": 24
         },
         {
             "question": "How have you found online classes? 💻",
@@ -105,7 +111,7 @@
         {
             "question": "Someone had the motherfucking BALLS to talk shit about you behind your back. You:",
             "options": ["Confront them 🖕", "Be passive aggressive 🙄", "Ignore it 😗"],
-            "num": 26
+            "number": 26
         },
         {
             "question": "Do you have a tendency to let things build up or do you retroactively address things? 🙂",
@@ -113,15 +119,18 @@
         },
         {
             "question": "Least favorite billionaire 💸 💵 💴 💶 💷",
-            "options": ["Zuckerburg", "Bezos", "Musk"]
+            "options": ["Zuckerburg", "Bezos", "Musk"],
+            "number": 28
         },
         {
             "question": "Which of the following would you choose? 🧿",
-            "options": ["Take a peek at the future", "Undo one action in the past", "Extend your life by 5 years"]
+            "options": ["Take a peek at the future", "Undo one action in the past", "Extend your life by 5 years"],
+            "number": 29
         },
         {
             "question": "Fame or fortune? 😎 💵",
-            "options": ["Fame", "Fortune", "Neither matter to me"]
+            "options": ["Fame", "Fortune", "Neither matter to me"],
+            "number": 30
         },
         {
             "question": "Are you spontaneous or do you like having a plan",
@@ -129,11 +138,13 @@
         },
         {
             "question": "Cruising on a bird and you can either stay straight and injure 4 people, or steer and injure 3. What do you do?",
-            "options": ["Stay straight ⬆️", "Steer ↖️"]
+            "options": ["Stay straight ⬆️", "Steer ↖️"],
+            "number": 32
         },
         {
             "question": "Same as before, except one of them goes to USC, with a 70% chance in the group of 4 and 30% chance in the group of 3",
-            "options": ["Stay straight ⬆️", "Steer ↖️", "Try getting them all to be safe 👍 💯"]
+            "options": ["Stay straight ⬆️", "Steer ↖️", "Try getting them all to be safe 👍 💯"],
+            "number": 33
         },
         {
             "question": "Meal Plan Attitude",
@@ -141,11 +152,13 @@
         },
         {
             "question": "If you had to do one of the following, what would you choose?",
-            "options": ["Prank call Daddy Block for at least 3 min 📞", "Swim in inverted fountain 🏊‍♀️", "Make cashier repeat themselves 5 times 🤦‍♂️", "Leave satanic propaganda outside your dorm for a day 👹 👺"]
+            "options": ["Prank call Daddy Block for at least 3 min 📞", "Swim in inverted fountain 🏊‍♀️", "Make cashier repeat themselves 5 times 🤦‍♂️", "Leave satanic propaganda outside your dorm for a day 👹 👺"],
+            "number": 35
         },
         {
             "question": "Andre",
-            "options": ["Love his hustle!", "Will transcend dimensions to avoid him", "Who?"]
+            "options": ["Love his hustle!", "Will transcend dimensions to avoid him", "Who?"],
+            "number": 36
         },
         {
             "question": "Do you do the midnight yell? 🗣",
@@ -157,11 +170,13 @@
         },
         {
             "question": "Someone took your WET clothes out of the washer and dumped it on the floor so they could do their laundry. How do you react?",
-            "options": ["Shrug it off and deal with it 🤷‍♀️", "Intercept their clothes and yeet them into the bushes 🏌🏽‍♂️", "Stuff them in washer heavy duty 💦💦💦", "Stuff them in dryer high heat mode 🔥🔥🔥"]
+            "options": ["Shrug it off and deal with it 🤷‍♀️", "Intercept their clothes and yeet them into the bushes 🏌🏽‍♂️", "Stuff them in washer heavy duty 💦💦💦", "Stuff them in dryer high heat mode 🔥🔥🔥"],
+            "number": 39
         },
         {
             "question": "Did you enjoy the survey? Yes, this will be considered in the matching",
-            "options": ["Yes!", "It was aight", "Fuck this shit lol"]
+            "options": ["Yes!", "It was aight", "Fuck this shit lol"],
+            "number": 40
         }
     ]
 }

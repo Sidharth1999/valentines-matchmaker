@@ -65,7 +65,7 @@ const ModalComponent = (props) => {
           preference,
           contact,
           message,
-          survey: Array(35).fill(-1),
+          survey: Array(40).fill(-1),
           match: ""
         });
         setOnboarded(true)
